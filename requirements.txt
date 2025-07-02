@@ -6,6 +6,5 @@ matplotlib
 seaborn
 plotly
 wordcloud
-scikit-learn
 vaderSentiment
-tensorflow-cpu==2.15.0  # lighter version
+requests
