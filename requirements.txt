@@ -6,5 +6,6 @@ matplotlib
 seaborn
 plotly
 wordcloud
+scikit-learn
 vaderSentiment
 requests
