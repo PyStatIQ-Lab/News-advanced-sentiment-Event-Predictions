@@ -13,9 +13,6 @@ from wordcloud import WordCloud
 from sklearn.feature_extraction.text import CountVectorizer
 import numpy as np
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import LSTM, Dense, Embedding
-from tensorflow.keras.utils import plot_model
 
 # Configure plot style
 plt.style.use('seaborn-v0_8-darkgrid')
