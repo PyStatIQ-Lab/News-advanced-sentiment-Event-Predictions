@@ -8,3 +8,4 @@ matplotlib
 wordcloud
 scikit-learn
 vaderSentiment
+tensorflow
