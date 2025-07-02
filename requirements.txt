@@ -8,4 +8,4 @@ matplotlib
 wordcloud
 scikit-learn
 vaderSentiment
-tensorflow==2.11.0
+tensorflow
