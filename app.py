@@ -494,16 +494,21 @@ def main():
         
         # Sentiment-Price Correlation Visualization
         st.subheader("Sentiment-Price Correlation Analysis")
-        selected_symbol = st.selectbox("Select Company for Correlation Analysis", 
-                                      options=df['Symbol'].unique())
-        selected_exchange = df[df['Symbol'] == selected_symbol]['Exchange'].values[0]
         
-        with st.spinner(f"Generating correlation analysis for {selected_symbol}..."):
-            fig = generate_sentiment_price_chart(selected_symbol, selected_exchange)
-            if fig:
-                st.plotly_chart(fig, use_container_width=True)
-            else:
-                st.warning("Could not generate correlation chart for this company")
+        # Check if we have symbols to select from
+        if not df.empty and 'symbol' in df.columns:
+            selected_symbol = st.selectbox("Select Company for Correlation Analysis", 
+                                          options=df['symbol'].unique())
+            selected_exchange = df[df['symbol'] == selected_symbol]['exchange'].values[0]
+            
+            with st.spinner(f"Generating correlation analysis for {selected_symbol}..."):
+                fig = generate_sentiment_price_chart(selected_symbol, selected_exchange)
+                if fig:
+                    st.plotly_chart(fig, use_container_width=True)
+                else:
+                    st.warning("Could not generate correlation chart for this company")
+        else:
+            st.warning("No company data available for correlation analysis")
     else:
         st.warning("No predictions available based on current news data")
     
