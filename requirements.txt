@@ -1,11 +1,11 @@
 streamlit
 yfinance
 pandas
-seaborn
-plotly
 numpy
 matplotlib
+seaborn
+plotly
 wordcloud
 scikit-learn
 vaderSentiment
-tensorflow
+tensorflow-cpu==2.15.0  # lighter version
